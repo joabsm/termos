@@ -2,8 +2,8 @@
 <html>
 <head>
   <meta charset="UTF-8">
-<style>
-  body {
+  <style>
+    /body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
@@ -70,8 +70,20 @@
     height: auto;
   
 }
+  </style>
+  <script>
+    window.onload = function() {
+      var enviarBtn = document.querySelector('.btn-enviar');
+      var agreeCheckbox = document.getElementById('agree');
 
-</style>
+      enviarBtn.onclick = function(event) {
+        if (!agreeCheckbox.checked) {
+          event.preventDefault();
+          alert('Você deve marcar a caixa de seleção antes de enviar.');
+        }
+      };
+    };
+  </script>
 </head>
 <body>
   
@@ -86,8 +98,19 @@
 
   <h3>Termo de Concordância de Dados Pessoais</h3>
   <textarea readonly>
-  Ao preencher este formulário, você concorda com a coleta, armazenamento e processamento de seus dados pessoais pela nossa empresa conforme descrito em nossa Política de Privacidade.
-  ...
+    Ao preencher este formulário, você concorda com a coleta, armazenamento e processamento de seus dados pessoais pela nossa empresa conforme descrito em nossa Política de Privacidade.
+
+  1. Coleta de Dados: Coletamos os dados que você fornece neste formulário. Isso pode incluir, mas não se limita a, seu nome, endereço de e-mail, número de telefone e qualquer outra informação que você escolher fornecer.
+
+  2. Uso de Dados: Usamos seus dados para responder às suas consultas, fornecer nossos serviços e melhorar a sua experiência conosco.
+
+  3. Compartilhamento de Dados: Não compartilhamos seus dados com terceiros sem o seu consentimento explícito, exceto quando necessário para fornecer nossos serviços ou cumprir a lei.
+
+  4. Segurança de Dados: Implementamos medidas de segurança robustas para proteger seus dados. Seus dados são criptografados e armazenados em servidores seguros.
+
+  5. Direitos do Usuário: Você tem o direito de acessar, corrigir ou excluir seus dados a qualquer momento. Por favor, entre em contato conosco se desejar exercer esses direitos.
+
+  Ao clicar em "Concordo", você confirma que leu e entendeu este Termo de Concordância de Dados Pessoais e concorda com a coleta, uso e armazenamento de seus dados pessoais conforme descrito.
   </textarea>
 
   <input type="checkbox" id="agree" name="agree">
