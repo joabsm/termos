@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
   <style>
     /body {
     font-family: Arial, sans-serif;
@@ -37,7 +38,7 @@
     background-color: #4CAF50; /* Verde */
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 12px 24px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -64,12 +65,30 @@
   input[type="submit"] {
     font-weight: bold;
   }
+input[type="submit"] {
+  padding: 12px 24px;
+}
 
     .logo-empresa img {
     max-width: 100%;
     height: auto;
   
 }
+
+media only screen and (max-width: 600px) {
+  .form {
+    width: 100%;
+    padding: 10px;
+  }
+body {
+  font-size: 16px;
+}
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+}
+
   </style>
   <script>
     window.onload = function() {
